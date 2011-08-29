@@ -1,0 +1,164 @@
+
+pages.github.com
+create repo NAME.github.com
+clone
+
+add index.html and commit to master
+wait 10 min
+
+gem install bundler
+bundle init
+
+add gems to Gemfile
+
+gem install guard
+gem install rb-fsevent
+gem install growl
+
+# https://github.com/guard/guard/wiki/List-of-available-Guards
+gem install guard-bundler
+gem install guard-coffeescript # https://github.com/guard/guard-coffeescript
+gem isntall compass
+gem install guard-haml
+
+guard init
+guard init bundler
+guard init compass
+guard init coffeescript
+guard init haml
+
+guard
+
+
+mkdir static && cd $_
+compass create compass
+compass -f blueprint my_compass_project
+mkdir coffee
+
+
+jekyll
+guard
+compass
+coffeescript
+haml
+
+
+
+
+
+
+
+
+$ compass help
+Usage: compass help [command]
+
+Description:
+  The Compass Stylesheet Authoring Framework helps you
+  build and maintain your stylesheets and makes it easy
+  for you to use stylesheet libraries provided by others.
+
+Donating:
+  Compass is charityware. If you find it useful please make
+  a tax deductable donation: http://umdf.org/compass
+
+To get help on a particular command please specify the command.
+
+Primary Commands:
+  * clean	- Remove generated files and the sass cache
+  * compile	- Compile Sass stylesheets to CSS
+  * create	- Create a new compass project
+  * init	- Add compass to an existing project
+  * watch	- Compile Sass stylesheets to CSS when they change
+Other Commands:
+  * config	- Generate a configuration file for the provided command line options.
+  * frameworks	- List the available frameworks
+  * grid-img	- Generates a grid background image.
+  * help	- Get help on a compass command or extension
+  * imports	- Emit an imports suitable for passing to the sass command-line.
+  * install	- Install an extension's pattern into your compass project
+  * interactive	- Interactively evaluate SassScript
+  * sprite	- Generate an import for your sprites.
+  * stats	- Report statistics about your stylesheets
+  * unpack	- Copy an extension into your extensions folder.
+  * validate	- Validate your generated css.
+  * version	- Print out version information
+
+Available Frameworks & Patterns:
+
+  * blueprint
+    - blueprint/basic      - A basic blueprint install that mimics the actual blueprint css.
+    - blueprint/buttons    - Button Plugin
+    - blueprint/link_icons - Icons for common types of links
+    - blueprint/project    - The blueprint framework.
+    - blueprint/semantic   - The blueprint framework for use with semantic markup.
+  * compass
+    - compass/ellipsis     - Plugin for cross-browser ellipsis truncated text.
+    - compass/extension    - Generate a compass extension.
+    - compass/pie          - Integration with http://css3pie.com/
+    - compass/project      - The default project layout.
+
+Global Options:
+    -r, --require LIBRARY            Require the given ruby LIBRARY before running commands.
+                                       This is used to access compass plugins without having a
+                                       project configuration file.
+    -l, --load FRAMEWORK_DIR         Load the framework or extensions found in the FRAMEWORK directory.
+    -L, --load-all FRAMEWORKS_DIR    Load all the frameworks or extensions found in the FRAMEWORKS_DIR directory.
+    -q, --quiet                      Quiet mode.
+        --trace                      Show a full stacktrace on error
+        --force                      Allows some failing commands to succeed instead.
+        --dry-run                    Dry Run. Tells you what it plans to do.
+        --boring                     Turn off colorized output.
+    -?, -h, --help                   Show this message
+
+
+
+
+
+
+
+
+
+$ compass create compass
+directory compass/ 
+directory compass/sass/ 
+directory compass/stylesheets/ 
+   create compass/config.rb 
+   create compass/sass/screen.scss 
+   create compass/sass/print.scss 
+   create compass/sass/ie.scss 
+   create compass/stylesheets/ie.css 
+   create compass/stylesheets/print.css 
+   create compass/stylesheets/screen.css 
+
+*********************************************************************
+Congratulations! Your compass project has been created.
+
+You may now add and edit sass stylesheets in the sass subdirectory of your project.
+
+Sass files beginning with an underscore are called partials and won't be
+compiled to CSS, but they can be imported into other sass stylesheets.
+
+You can configure your project by editing the config.rb configuration file.
+
+You must compile your sass stylesheets into CSS when they change.
+This can be done in one of the following ways:
+  1. To compile on demand:
+     compass compile [path/to/project]
+  2. To monitor your project for changes and automatically recompile:
+     compass watch [path/to/project]
+
+More Resources:
+  * Website: http://compass-style.org/
+  * Sass: http://sass-lang.com
+  * Community: http://groups.google.com/group/compass-users/
+
+
+To import your new stylesheets add the following lines of HTML (or equivalent) to your webpage:
+<head>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+</head>
+
